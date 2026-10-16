@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio and profile showcasing expertise, qualifications, and recent projects.">
+    <meta name="author" content="Alex Morgan">
+    <title>Alex Morgan | Professional Profile</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Alex Morgan</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Section 1: About Me -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome! I am a Senior Software Architect with over 8 years of experience designing scalable web applications and cloud infrastructure. My focus is on delivering robust, user-centric digital products using modern technology stacks and agile practices.</p>
+            
+            <ul class="about-list">
+                <li><strong>Core Expertise:</strong> Full-Stack Web Development (TypeScript, React, Node.js)</li>
+                <li><strong>Certifications:</strong> AWS Certified Solutions Architect, Certified ScrumMaster (CSM)</li>
+                <li><strong>Education:</strong> B.S. in Computer Science, University of Technology</li>
+                <li><strong>Key Strengths:</strong> System design, team leadership, performance optimization, and CI/CD pipelines</li>
+            </ul>
+        </section>
+
+        <!-- Section 2: Projects -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1 (With Image) -->
+                <article class="project-card">
+                    <div>
+                        <img src="analytics.jpg" alt="E-Commerce Analytics Dashboard interface preview">
+                        <h3>E-Commerce Analytics Platform</h3>
+                        <p>A real-time data visualization dashboard handling over 1 million daily events, built using React, D3.js, and Node.js.</p>
+                    </div>
+                    <a href="https://github.com/example/ecommerce-analytics" target="_blank" rel="noopener noreferrer">View Project Repository &rarr;</a>
+                </article>
+
+                <!-- Project 2 (With Image) -->
+                <article class="project-card">
+                    <div>
+                        <img src="task-manage.webp" alt="Task Management Mobile Application UI">
+                        <h3>Task Automation Engine</h3>
+                        <p>An enterprise workflow automation tool designed to streamline operational tasks and integrate third-party APIs seamlessy.</p>
+                    </div>
+                    <a href="https://example.com/task-engine-demo" target="_blank" rel="noopener noreferrer">Live Demo &rarr;</a>
+                </article>
+
+                <!-- Project 3 (With Linked Resource) -->
+                <article class="project-card">
+                    <div>
+                        <img src="deploy.png" alt="Terminal output of Open Source CLI Tool">
+                        <h3>Cloud Deploy CLI Tool</h3>
+                        <p>An open-source command-line interface developed in Go to simplify multi-region cloud deployments for developers.</p>
+                    </div>
+                    <a href="https://example.com/cloud-cli-docs" target="_blank" rel="noopener noreferrer">Documentation & Resource &rarr;</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Contact Form -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <form class="contact-form" action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="jane.doe@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Alex Morgan. All rights reserved.</p>
+        <p>Built with semantic HTML5 & CSS3 | Last updated: October 2026</p>
+        
+        <nav aria-label="Social Media Links">
+            <ul class="social-links">
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
+Adjust the code to include @media queries to adapt the page for mobile, tablet, and desktop users
+
+Here is the updated boilerplate HTML code with comprehensive @media queries added to ensure full responsiveness across mobile, tablet, and desktop viewports.
+
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio and profile showcasing expertise, qualifications, and recent projects.">
+    <meta name="author" content="Alex Morgan">
+    <title>Alex Morgan | Professional Profile</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary-color: #1e293b;
+            --background-color: #f8fafc;
+            --card-background: #ffffff;
+            --text-color: #334155;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* ----------------------------------------------------
+           BASE STYLES (Mobile-First Defaults: < 768px)
+        ---------------------------------------------------- */
+        header {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            padding: 1.25rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.25rem 0.5rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            width: 100%;
+            margin: 1.5rem auto;
+            padding: 0 1rem;
+            flex: 1;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background-color: var(--card-background);
+            padding: 1.25rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 1.35rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Section 1: About Me */
+        .about-list {
+            margin-top: 1rem;
+            padding-left: 1.25rem;
+        }
+
+        .about-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Section 2: Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column on small screens */
+            gap: 1.25rem;
+        }
+
+        .project-card {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+            font-size: 1.15rem;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section 3: Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        input, textarea {
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        button[type="submit"] {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%; /* Full width button on mobile */
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #94a3b8;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            margin-top: auto;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.25rem;
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ----------------------------------------------------
+           MEDIA QUERY: TABLETS (768px to 1023px)
+        ---------------------------------------------------- */
+        @media screen and (min-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 1.25rem 2rem;
+                text-align: left;
+            }
+
+            header h1 {
+                font-size: 1.75rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+            }
+
+            main {
+                max-width: 90%;
+                margin: 2rem auto;
+            }
+
+            section {
+                padding: 2rem;
+                margin-bottom: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            /* Projects grid displays 2 items per row on tablets */
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .contact-form {
+                max-width: 600px;
+            }
+
+            button[type="submit"] {
+                width: auto; /* Auto width on tablet and up */
+            }
+        }
+
+
+        /* ----------------------------------------------------
+           MEDIA QUERY: DESKTOPS (1024px and above)
+        ---------------------------------------------------- */
+        @media screen and (min-width: 1024px) {
+            main {
+                max-width: 1100px;
+                padding: 0 2rem;
+            }
+
+            /* Projects grid displays 3 items per row on large desktops */
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            section {
+                padding: 2.5rem;
+            }
+
+            .contact-form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.25rem;
+            }
+
+            /* Make message textarea and submit button span full width */
+            .form-group.full-width,
+            button[type="submit"] {
+                grid-column: span 2;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Alex Morgan</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Section 1: About Me -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome! I am a Senior Software Architect with over 8 years of experience designing scalable web applications and cloud infrastructure. My focus is on delivering robust, user-centric digital products using modern technology stacks and agile practices.</p>
+            
+            <ul class="about-list">
+                <li><strong>Core Expertise:</strong> Full-Stack Web Development (TypeScript, React, Node.js)</li>
+                <li><strong>Certifications:</strong> AWS Certified Solutions Architect, Certified ScrumMaster (CSM)</li>
+                <li><strong>Education:</strong> B.S. in Computer Science, University of Technology</li>
+                <li><strong>Key Strengths:</strong> System design, team leadership, performance optimization, and CI/CD pipelines</li>
+            </ul>
+        </section>
+
+        <!-- Section 2: Projects -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div>
+                        <img src="https://via.placeholder.com/400x200?text=E-Commerce+Platform" alt="E-Commerce Analytics Dashboard interface preview">
+                        <h3>E-Commerce Analytics Platform</h3>
+                        <p>A real-time data visualization dashboard handling over 1 million daily events, built using React, D3.js, and Node.js.</p>
+                    </div>
+                    <a href="https://github.com/example/ecommerce-analytics" target="_blank" rel="noopener noreferrer">View Project Repository &rarr;</a>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div>
+                        <img src="https://via.placeholder.com/400x200?text=Task+Management+App" alt="Task Management Mobile Application UI">
+                        <h3>Task Automation Engine</h3>
+                        <p>An enterprise workflow automation tool designed to streamline operational tasks and integrate third-party APIs seamlessly.</p>
+                    </div>
+                    <a href="https://example.com/task-engine-demo" target="_blank" rel="noopener noreferrer">Live Demo &rarr;</a>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div>
+                        <img src="https://via.placeholder.com/400x200?text=Open+Source+CLI" alt="Terminal output of Open Source CLI Tool">
+                        <h3>Cloud Deploy CLI Tool</h3>
+                        <p>An open-source command-line interface developed in Go to simplify multi-region cloud deployments for developers.</p>
+                    </div>
+                    <a href="https://example.com/cloud-cli-docs" target="_blank" rel="noopener noreferrer">Documentation & Resource &rarr;</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Contact Form -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <form class="contact-form" action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="jane.doe@example.com">
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Alex Morgan. All rights reserved.</p>
+        <p>Built with semantic HTML5 & CSS3 | Last updated: October 2026</p>
+        
+        <nav aria-label="Social Media Links">
+            <ul class="social-links">
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
