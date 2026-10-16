@@ -1,0 +1,37 @@
+Prompt 1.
+
+Generate a boilerplate html page for a profile page. The purpose of the page is to highlight the subject's expertise and qualifications.
+Include the following:
+1. a <header> element with the primary site title in <h1> tags, and <nav> links
+2. <main> content containing three distinct <sections>.:
+	Section 1. Titled "About Me". Introduces subject using <h2>, <p> and <ul> tags.
+
+	Section 2. Titled "Projects". Contains 3 cards using <article> tags. Each card should have a title, description, and either an
+  image or a linked resource.
+
+	Section 3. Titled "Contact". Embed a <form> by coupling <label for=""> tags with <input> tags. The form includes elements for text 
+  entry, email entry, and a submission button.
+3. After the sections, include a <footer> with copyright details, metadata, and social links.
+
+
+
+Prompt 2.
+Adjust the code to include @media queries to adapt the page for mobile, tablet, and desktop users
+
+
+I used Gemini to create my page. My first prompt went surprisingly well, resulting in a page that fit my specifications. It looked 
+good and was overall usable with the exception of missing image files (and links to nonexistent sites). Gemini even generated CSS for
+the page. In fact, most of its response was CSS shoved into the header. I left it alone at this stage, but addressed the issue later
+
+After my first prompt, the only requirement I was missing was media-responsive @media queries. I told Gemini to restructure the code
+to include them, and it did. After inspecting the site, I manually moved the CSS code to its own file and linked it to the site index.
+I then found 3 pictures to insert, and manually added them in. Image sources included below.
+
+Analytics Dashboard:
+https://assets.qlik.com/image/upload/w_1790/q_auto/qlik/glossary/dashboard-examples/seo-marketing-dashboards-web-analytics-dashboard_uki6lh.jpg
+
+Task Management Dashboard:
+https://cdn.dribbble.com/userupload/44914917/file/58e29a2a1822b2913a8e5d772d62ef17.png
+
+Deployment Diagram:
+https://upload.wikimedia.org/wikipedia/commons/b/b9/Deployment_Diagram.PNG?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original
