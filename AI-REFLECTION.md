@@ -1,3 +1,5 @@
+Good glory this thing butchered the formatting. I've attached a txt file that's 74% more legible.
+
 Prompt 1.
 
 Generate a boilerplate html page for a profile page. The purpose of the page is to highlight the subject's expertise and qualifications.
