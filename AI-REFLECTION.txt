@@ -35,3 +35,42 @@ https://cdn.dribbble.com/userupload/44914917/file/58e29a2a1822b2913a8e5d772d62ef
 
 Deployment Diagram:
 https://upload.wikimedia.org/wikipedia/commons/b/b9/Deployment_Diagram.PNG?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original
+
+
+
+
+
+
+-------------------------------------------------------------
+PART 2
+--------------------------------------------------------------
+
+Prompt 1:
+Move the styling from this file into hte styles.css file
+<note: I added index.html and styles.css to the context>
+
+Prompt 2:
+Generate two new html files titled "biography.html" and "awards.html". 
+They should follow the same styling patterns as index.html, and also have 
+the same header and footer as index.html. The rest of the body content for 
+the new files should be empty.
+
+Propmt 3:
+Change the nav portion of the header in #index.html, #biography.html, and #awards.html. 
+For each header, there will be a main navigation segment that links to #index.html, 
+#biography.html, and #awards.html. For the header in #index.html, move the about, projects,
+and contact links into another, smaller segment of the nav bar. Remove the about, projects, 
+and contact links from the header in #biography.html and #awards.html.
+
+Prompt 4:
+Float the main-navigation segement of the header left. Float the section-navigation of #index.html 
+to the right.
+
+Prompt 5:
+Float the main-navigation nav in the headers of #biography.html and #awards.html to the left. 
+All three html files should float the main-navigation nav to the left.
+
+Prmopt 6:
+Vertically center the main-navigation links in #biography.html and #awards.html. Add a .active 
+class to the main-navigation link that matches the the page the user is on. Style this class to 
+highlight the element so users know which page they are on.
