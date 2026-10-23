@@ -31,3 +31,77 @@ https://cdn.dribbble.com/userupload/44914917/file/58e29a2a1822b2913a8e5d772d62ef
 
 Deployment Diagram:
 https://upload.wikimedia.org/wikipedia/commons/b/b9/Deployment_Diagram.PNG?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original
+-------------------
+Part 2
+---------------------------------------------------------------------
+Prompt 1:
+Move the styling from this file into hte styles.css file
+<note: I added index.html and styles.css to the context>
+
+Prompt 2:
+Generate two new html files titled "biography.html" and "awards.html". 
+They should follow the same styling patterns as index.html, and also have 
+the same header and footer as index.html. The rest of the body content for 
+the new files should be empty.
+
+Propmt 3:
+Change the nav portion of the header in #index.html, #biography.html, and #awards.html. 
+For each header, there will be a main navigation segment that links to #index.html, 
+#biography.html, and #awards.html. For the header in #index.html, move the about, projects,
+and contact links into another, smaller segment of the nav bar. Remove the about, projects, 
+and contact links from the header in #biography.html and #awards.html.
+
+Prompt 4:
+Float the main-navigation segement of the header left. Float the section-navigation of #index.html 
+to the right.
+
+Prompt 5:
+Float the main-navigation nav in the headers of #biography.html and #awards.html to the left. 
+All three html files should float the main-navigation nav to the left.
+
+Prompt 6:
+Vertically center the main-navigation links in #biography.html and #awards.html. Add a .active 
+class to the main-navigation link that matches the the page the user is on. Style this class to 
+highlight the element so users know which page they are on.
+
+Prompt 7:
+Using the media queries, apply style so the navigation header compresses into a hamburger menu 
+unless the user is at tablet size
+
+Prompt 8:
+Create a short biography for a software developer named Alex Morgan and display it on this page
+
+Prompt 9:
+Create a bulleted list of coding awards for a fake person named Alex Morgan. Explain how each was 
+earned using 2-3 sentences. Examples include employee of the month and a convention badge
+
+Prompt 10:
+Add a modal dialouge box that appears when the user presses the submit button. If there are no 
+validation errors on the input form, it should display this modal dialouge box and inform the user 
+the message was sent
+
+Prompt 11:
+Add a dark/light mode toggle with eventlistener('click') and classList.toggle() to each page at 
+the top right, beneath the header element
+
+Prompt 12:
+Apply CSS focus indicators (using focus or focus-visible) to highlight interactable elements the 
+user has focused on
+
+Prompt 13:
+Apply the following pallet to each page
+:root {
+    --primary-color: #59CDFF
+    --secondary-color: #AB6392
+    --text-color: #2A0081
+    --bg-color: #F5C700
+}
+
+Prompt 14:
+Exchange the value of --secordary-color for #A25788
+
+Prompt 15:
+Rename awards.html to projects.html. Change the nav element to reflect this in all 3 pages
+
+Prompt 16:
+rename biography.html to contact.html. Change the nav element to reflect this in all 3 pages

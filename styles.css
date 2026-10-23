@@ -1,12 +1,24 @@
 
 :root {
-    --primary-color: #2563eb;
-    --primary-hover: #1d4ed8;
-    --secondary-color: #1e293b;
-    --background-color: #f8fafc;
-    --card-background: #ffffff;
-    --text-color: #334155;
-    --border-color: #e2e8f0;
+    --primary-color: #59CDFF;
+    --primary-hover: #3bbaf6;
+    --secondary-color: #A25788;
+    --background-color: #F5C700;
+    --card-background: #fffaf0;
+    --text-color: #2A0081;
+    --border-color: #d9b6ff;
+    --accent-color: #A25788;
+}
+
+body.dark-mode {
+    --primary-color: #59CDFF;
+    --primary-hover: #3bbaf6;
+    --secondary-color: #AB6392;
+    --background-color: #2A0081;
+    --card-background: #1a0d4a;
+    --text-color: #F5C700;
+    --border-color: #AB6392;
+    --accent-color: #59CDFF;
 }
 
 * {
@@ -23,6 +35,26 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle {
+    align-self: flex-end;
+    margin: 0.75rem 1rem 0;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background-color: var(--card-background);
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+}
+
+.theme-toggle:focus,
+.theme-toggle:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
 }
 
 /* ----------------------------------------------------
@@ -88,6 +120,21 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+a:focus,
+a:focus-visible,
+button:focus,
+button:focus-visible,
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible,
+label:focus,
+label:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 .main-navigation a.active {
@@ -215,6 +262,41 @@ h2 {
     margin-bottom: 1.25rem;
 }
 
+.awards-section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.award-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.award-list li {
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+}
+
+.award-list strong {
+    color: var(--secondary-color);
+    font-size: 1.05rem;
+}
+
+.award-list p {
+    margin-top: 0.4rem;
+}
+
+.biography-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.biography-section p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
 /* Section 1: About Me */
 .about-list {
     margin-top: 1rem;
@@ -312,10 +394,64 @@ button[type="submit"]:hover {
     background-color: var(--primary-hover);
 }
 
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 1000;
+}
+
+.modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: var(--card-background);
+    border-radius: 12px;
+    max-width: 420px;
+    width: min(90vw, 420px);
+    padding: 2rem 1.5rem 1.5rem;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.2);
+    text-align: center;
+}
+
+.modal-content h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+}
+
+.modal-content p {
+    margin-bottom: 1.25rem;
+    color: var(--text-color);
+}
+
+.modal-close {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.7rem 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background-color: var(--primary-hover);
+}
+
 /* Footer */
 footer {
     background-color: var(--secondary-color);
-    color: #94a3b8;
+    color: #1d3658;
     padding: 1.5rem 1rem;
     text-align: center;
     margin-top: auto;

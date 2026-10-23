@@ -22,8 +22,8 @@
             <nav class="main-navigation" aria-label="Main Navigation">
                 <ul>
                     <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-                    <li><a href="biography.html">Biography</a></li>
-                    <li><a href="awards.html">Awards</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="projects.html">Projects</a></li>
                 </ul>
             </nav>
             <nav class="section-navigation" aria-label="Page Sections">
@@ -36,8 +36,18 @@
         </div>
     </header>
 
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">Dark Mode</button>
+
     <!-- Main Content Area -->
     <main>
+        <div class="modal" id="successModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-content" tabindex="-1">
+                <h3 id="modalTitle">Message Sent</h3>
+                <p>Your message was sent successfully.</p>
+                <button type="button" class="modal-close" id="closeModalBtn">Close</button>
+            </div>
+        </div>
+
         <!-- Section 1: About Me -->
         <section id="about">
             <h2>About Me</h2>
@@ -51,67 +61,19 @@
             </ul>
         </section>
 
-        <!-- Section 2: Projects -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                
-                <!-- Project 1 -->
-                <article class="project-card">
-                    <div>
-                        <img src="analytics.jpg" alt="E-Commerce Analytics Dashboard interface preview">
-                        <h3>E-Commerce Analytics Platform</h3>
-                        <p>A real-time data visualization dashboard handling over 1 million daily events, built using React, D3.js, and Node.js.</p>
-                    </div>
-                    <a href="https://github.com/example/ecommerce-analytics" target="_blank" rel="noopener noreferrer">View Project Repository &rarr;</a>
-                </article>
-
-                <!-- Project 2 -->
-                <article class="project-card">
-                    <div>
-                        <img src="task-manage.webp" alt="Task Management Mobile Application UI">
-                        <h3>Task Automation Engine</h3>
-                        <p>An enterprise workflow automation tool designed to streamline operational tasks and integrate third-party APIs seamlessly.</p>
-                    </div>
-                    <a href="https://example.com/task-engine-demo" target="_blank" rel="noopener noreferrer">Live Demo &rarr;</a>
-                </article>
-
-                <!-- Project 3 -->
-                <article class="project-card">
-                    <div>
-                        <img src="deploy.png" alt="Terminal output of Open Source CLI Tool">
-                        <h3>Cloud Deploy CLI Tool</h3>
-                        <p>An open-source command-line interface developed in Go to simplify multi-region cloud deployments for developers.</p>
-                    </div>
-                    <a href="https://example.com/cloud-cli-docs" target="_blank" rel="noopener noreferrer">Documentation & Resource &rarr;</a>
-                </article>
-
-            </div>
+        <section class="biography-section" aria-labelledby="bio-heading">
+            <h2 id="bio-heading">Biography</h2>
+            <p>
+                Alex Morgan is a software developer who enjoys building practical, user-friendly applications that solve real problems.
+                With a background in both front-end and back-end development, Alex has spent the last several years creating responsive websites,
+                streamlined workflows, and dependable digital tools for teams and clients.
+            </p>
+            <p>
+                Alex is especially passionate about clean code, thoughtful design, and learning new technologies.
+                Outside of work, Alex enjoys exploring new programming ideas, mentoring aspiring developers, and staying active with outdoor activities.
+            </p>
         </section>
 
-        <!-- Section 3: Contact Form -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <form class="contact-form" action="#" method="POST">
-                
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Jane Doe">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="jane.doe@example.com">
-                </div>
-
-                <div class="form-group full-width">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
-                </div>
-
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
     </main>
 
     <!-- Footer Section -->
@@ -128,4 +90,5 @@
         </nav>
     </footer>
 
+    <script src="app.js"></script>
 </body>

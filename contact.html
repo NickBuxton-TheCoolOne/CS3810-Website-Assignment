@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Alex Morgan.">
+    <meta name="author" content="Alex Morgan">
+    <title>Contact | Alex Morgan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Alex Morgan</h1>
+        <input class="menu-toggle-checkbox" type="checkbox" id="mobile-menu-contact">
+        <label class="menu-toggle-button" for="mobile-menu-contact">
+            <span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+            Menu
+        </label>
+        <nav class="main-navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">Dark Mode</button>
+
+    <main>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form class="contact-form" id="contactForm" action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="jane.doe@example.com">
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Alex Morgan. All rights reserved.</p>
+        <p>Built with semantic HTML5 &amp; CSS3 | Last updated: October 2026</p>
+
+        <nav aria-label="Social Media Links">
+            <ul class="social-links">
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
